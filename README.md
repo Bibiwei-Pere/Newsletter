@@ -15,6 +15,12 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Screenshot
 
+#### Desktop 1440px
+![127 0 0 1_3000_index html(iPad Air)_11zon](https://github.com/Bibiwei-Pere/Newsletter/assets/106984663/bece6650-1589-452a-941e-ad1ebb761286)
+![127 0 0 1_3000_assets_html_success html__11zon](https://github.com/Bibiwei-Pere/Newsletter/assets/106984663/f22a8e79-63a4-43b4-b932-aa5dcbe13357)
+
+#### Mobile 375px
+<img src="https://github.com/Bibiwei-Pere/Newsletter/assets/106984663/a6235c94-b0f7-4921-a682-6f6eb1bd1d1f" width="300px" height="500px")
 
 
 ### Links
