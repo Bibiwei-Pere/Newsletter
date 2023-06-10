@@ -1,0 +1,141 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Grey: hsl(231, 7%, 60%);
+    --background-color: hsl(234, 29%, 20%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(235, 18%, 26%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 43px;
+    color: hsl(234, 29%, 20%);
+    text-align: left;
+}
+
+p {
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 770px;
+    padding: 10px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.container .wrapper {
+    text-align: center;
+    padding: 1px 38px;
+}
+
+.container .img1 {
+    border-radius: 15px;
+    width: 315px;
+    height: auto;
+}
+
+.container .img2 {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+  
+.form label {
+    font-weight: bold;
+    text-align: left;
+    margin: 15px 0 8px;
+    font-size: 14px;
+}
+  
+.form input {
+    display: block;
+    padding: 12px 1px 12px 25px;
+    border: 1px solid hsl(231, 7%, 60%);
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.form input:active, .form input:focus {
+    border: 1px var(--background-color);
+}
+
+.list div {
+    display: flex;
+}
+
+.list div img {
+    width: 20px;
+}
+
+.list div p {
+    margin-left: 12px;
+}
+
+.btn {
+    display: block;
+    padding: 12px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+    background-color: var(--Tomato);
+}
+
+@media (max-width: 810px){
+    body {
+        background-color: hsl(0, 0%, 100%);
+        height: auto;
+    }
+
+    
+    h1 {
+        font-size: 30px;
+        color: hsl(234, 29%, 20%);
+        text-align: left;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        padding: 50px;
+        border-radius: 0;
+        text-align: left;
+    }
+    .container .img1 {
+        display: none;
+    }
+    .container .img2 {
+        display: block;
+        border-radius: 15px;
+        width: 100%;
+        height: auto;
+    }
+    .container .wrapper {
+        width: 90%;
+    }
+}
