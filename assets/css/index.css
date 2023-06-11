@@ -25,6 +25,11 @@ p {
     text-align: left;
 }
 
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
 .hide {
     display: none !important;
   }
@@ -201,7 +206,7 @@ p {
         border-radius: 0;
         text-align: left;
     }
-    
+
     .container .img1 {
         display: none;
     }
