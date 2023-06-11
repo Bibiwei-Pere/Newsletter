@@ -1,14 +1,15 @@
 :root {
     --Tomato: hsl(4, 100%, 67%);
     --Grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
     --background-color: hsl(234, 29%, 20%);
 }
 
 body {
     display: flex;
     justify-content: center;
+    background: var(--background-color);
     align-items: center;
-    background-color: hsl(235, 18%, 26%);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     height: 100vh;
@@ -16,7 +17,7 @@ body {
 
 h1 {
     font-size: 43px;
-    color: hsl(234, 29%, 20%);
+    color: var(--background-color);
     text-align: left;
 }
 
@@ -24,9 +25,13 @@ p {
     text-align: left;
 }
 
+.hide {
+    display: none !important;
+  }
+
 .container {
+    background: var(--white);
     display: flex;
-    background-color: hsl(0, 0%, 100%);
     max-width: 770px;
     padding: 10px;
     border-radius: 18px;
@@ -55,14 +60,32 @@ p {
     width: 100%;
 }
   
-.form label {
-    font-weight: bold;
-    text-align: left;
-    margin: 15px 0 8px;
-    font-size: 14px;
-}
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
   
-.form input {
+  .email__legend {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .legend__error {
+    display: none;
+    color: var(--Tomato);
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+.input {
     display: block;
     padding: 12px 1px 12px 25px;
     border: 1px solid hsl(231, 7%, 60%);
@@ -71,9 +94,35 @@ p {
     border-radius: 5px;
 }
 
-.form input:active, .form input:focus {
-    border: 1px var(--background-color);
-}
+.input::placeholder {
+    color: var(--Grey);
+  }
+  
+  .input:-webkit-autofill,
+  .input:autofill,
+  .input {
+    color: var(--background-color);
+    padding: 16px 24px;
+    outline: none;
+    border: 1px solid var(--Grey);
+  }
+  
+  .input:active,
+  .input:hover,
+  .input:focus {
+    outline: none;
+    border: 1px solid var(--background-color);
+  }
+  
+  .input--error:active,
+  .input--error:hover,
+  .input--error:focus,
+  .input--error {
+    outline: none;
+    color: var(--Tomato) !important;
+    border: 1px solid var(--Tomato);
+    background: rgb(255, 98, 87, 0.1) !important;
+  }
 
 .list div {
     display: flex;
@@ -88,8 +137,9 @@ p {
 }
 
 .btn {
+    width: 100%;
     display: block;
-    padding: 12px;
+    padding: 15px 0;
     outline: none;
     font-size: 16px;
     border-radius: 5px;
@@ -100,7 +150,33 @@ p {
 }
 
 .btn:hover, .btn:active, .btn:focus {
+    box-shadow: 0 12px 20px 0px rgb(255 98 87 / 50%) ;
     background-color: var(--Tomato);
+}
+
+/* Pop up Message */
+
+.container-2 {
+  display: flex;
+  max-width: 430px;
+  background: var(--white);
+  padding: 30px 0;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.container-2 .wrapper-2 {
+  text-align: left;
+  padding: 1px 38px;
+}
+
+.wrapper-2 img {
+  width: 60px;
+}
+
+.wrapper-2 h1 {
+  font-size: 50px;
+  margin: 25px 0 10px 0;
 }
 
 @media (max-width: 810px){
@@ -108,7 +184,6 @@ p {
         background-color: hsl(0, 0%, 100%);
         height: auto;
     }
-
     
     h1 {
         font-size: 30px;
@@ -126,16 +201,23 @@ p {
         border-radius: 0;
         text-align: left;
     }
+    
     .container .img1 {
         display: none;
     }
+
     .container .img2 {
         display: block;
         border-radius: 15px;
         width: 100%;
         height: auto;
     }
+
     .container .wrapper {
         width: 90%;
+    }
+
+    .m-t {
+      margin-top: 200px;
     }
 }
